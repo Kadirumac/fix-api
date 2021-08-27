@@ -18,6 +18,10 @@ var root = {
 };
 
 var app = express();
+app.use('/',(req,res)=>{
+        res.send('<h1>Hello</h1>')
+})
+
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,
